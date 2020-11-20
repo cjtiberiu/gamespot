@@ -1,0 +1,18 @@
+.games-area {
+    top: 0;
+    position: relative;
+    padding: 20px;
+    color: rgb(197, 197, 197);
+    margin-top: 50px;
+}
+
+.heading-primary {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: rgba(197, 197, 197, 0.6);
+    position: relative;
+    width: 100%;
+    text-shadow: 0 0 15px 12px black;
+    margin-bottom: 25px;
+}

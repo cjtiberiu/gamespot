@@ -1,0 +1,16 @@
+@media only screen and (min-width: 1080px) {
+    .game-detail__img {
+        width: 60% !important;
+    }
+}
+
+.game-detail {
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    color: white;
+}
+
+.game-detail__img {
+    width: 100%;
+}

@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React, { useState, useEffect, useRef } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import GamesPage from './pages/GamesPage';
+import GameDetail from './pages/GameDetail';
+
+import Header from './components/Header';
+
+const App = () => {
+
+    const [height, setHeight] = useState(0);
+
+    const containerRef = useRef();
+
+    useEffect(() => {
+        setHeight(containerRef.current.scrollHeight);
+    }, []);
+
+    const setPageHeight = () => {
+        setHeight(containerRef.current.scrollHeight);
+    }
+
+
+    return (
+        <div className='app-container' ref={containerRef} style={{'height': height}}>
+            <Header />
+
+            <div className='content'>
+
+                <div className='container'>
+                    <Switch>
+                        <Route exact path='/games' component={() => <GamesPage setPageHeight={setPageHeight} />} />
+                        <Route exact path='/games/:game' component={GameDetail} />
+                    </Switch>
+                    
+                </div>
+                
+            </div>
+
+            
+        </div>
+    )
+};
 
 export default App;
