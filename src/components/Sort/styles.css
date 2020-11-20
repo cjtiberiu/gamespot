@@ -1,0 +1,18 @@
+.sort {
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.sort:hover {
+    cursor: pointer;
+}
+
+.sort:hover .sort-dropdown {
+    display: flex;
+}
+
+.fa-angle-down {
+    transform: translateY(3px);
+}
+

@@ -1,3 +1,6 @@
+
+
+
 @media only screen and (min-width: 1080px) {
 
     html {
@@ -5,8 +8,8 @@
     }
 
     .container {
-        width: 75%;
-        max-width: 75%;
+        width: 80%;
+        max-width: 80%;
     }
 }
 

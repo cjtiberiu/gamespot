@@ -1,0 +1,23 @@
+.sort-dropdown {
+    background-color: inherit;
+    flex-direction: column;
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    border-top: 2px solid grey;
+    outline: none;
+    z-index: 5;
+    background-image: linear-gradient(rgb(96, 103, 109),rgba(63, 78, 90));
+    position: absolute;
+    top: 100%;
+    display: none;
+    text-align: center;
+}
+
+.sort-option:hover {
+    color: white;
+}

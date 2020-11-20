@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 
 import GamesPage from './pages/GamesPage';
+import ContactPage from './pages/ContactPage';
 import GameDetail from './pages/GameDetail';
 
 import Header from './components/Header';
@@ -33,6 +34,7 @@ const App = () => {
                     <Switch>
                         <Route exact path='/games' component={() => <GamesPage setPageHeight={setPageHeight} />} />
                         <Route exact path='/games/:game' component={GameDetail} />
+                        <Route exact path='/contact' component={ContactPage} />
                     </Switch>
                     
                 </div>

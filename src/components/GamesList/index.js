@@ -1,54 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useContext } from 'react';
+import { Context } from '../../store/Store';
 
 import './styles.css';
 
 import GameBox from '../GameBox';
-import Axios from 'axios';
 
 const GamesList = props => {
 
-    const [games, setGames] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [state, dispatch] = useContext(Context);
 
-    useEffect(() => {
-        const getGames = async () => {
-
-            try {
-                const results = await axios.get('https://rawg.io/api/users/tiberu05/games')
-
-                if (isLoading) setGames(results.data.results);
-    
-                props.setPageHeight()
-            } catch(err) {
-                console.log(err)
-            }
-            
-        }
-
-        getGames();
-
-        return () => setIsLoading(false);
-
-    }, [])
-
-    useEffect(() => {
-        console.log(games);
-    }, [games])
+    const { games } = props;
 
     const renderGames = () => {
-        const render = games.map(game => {
-            return <GameBox game={game} />
-        })
 
-        return render;
+        if (state.sortBy === 'Latest') {
+
+            return games.map(game => {
+                return <GameBox key={game.id} game={game} />
+            })
+        } else if (state.sortBy === 'Rating') {
+
+            return games.map(el => el).sort((a, b) => b.rating - a.rating).map(game => {
+                return <GameBox key={game.id} game={game} />
+            })
+        } else if (state.sortBy === 'Release Date') {
+
+            return games.map(el => el).sort((a, b) => new Date(b.released) - new Date(a.released)).map(game => {
+                return <GameBox key={game.id} game={game} />
+            })
+        }
+        // } else if (state.sortBy === 'Release Date') {
+        //     games.sort((a, b) => b.rating - a.rating).map(game => {
+        //         return <GameBox key={game.id} game={game} />
+        //     })
+        // }
+
+        
+
     }
 
     return (
 
         <div className='games-list'>
 
+            
             {renderGames()}
+            
 
         </div>
     )

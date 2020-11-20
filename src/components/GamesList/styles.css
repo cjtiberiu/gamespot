@@ -1,13 +1,15 @@
 @media only screen and (min-width: 1080px) {
 
     .games-list {
-        justify-content: flex-start !important;
+        justify-content: space-between !important;
+        flex-basis: auto !important;
     }
 
 }
 
 .games-list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
@@ -15,5 +17,4 @@
     height: 80vh; */
     gap: 20px;
     position: relative;
-    border: 1px solid yellow
 }

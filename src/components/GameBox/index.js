@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import './styles.css';
 
@@ -7,11 +7,12 @@ import Image from '../../assets/img/first-cover.jpg';
 
 const GameBox = props => {
 
+    const history = useHistory();
+
     const { game } = props;
 
     return (
-        <Link to={`/games/${game.slug}`}>
-            <div className='game'>
+            <div key={game.id} className='game' onClick={() => history.push(`games/${game.slug}`)}>
                 <div className='overlay'>
                     <div className='text'>See more game details</div>
                 </div>
@@ -23,7 +24,6 @@ const GameBox = props => {
 
                 </div>
             </div>
-        </Link>
     )
 };
 

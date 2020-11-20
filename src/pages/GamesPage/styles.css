@@ -7,6 +7,9 @@
 }
 
 .heading-primary {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 5px;
@@ -16,3 +19,4 @@
     text-shadow: 0 0 15px 12px black;
     margin-bottom: 25px;
 }
+
