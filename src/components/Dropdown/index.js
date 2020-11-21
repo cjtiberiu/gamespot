@@ -8,7 +8,7 @@ const SortDropdown = props => {
     const { options, type } = props;
 
     const [state, dispatch] = useContext(Context);
-    const [years, setYears] = useState([])
+    const { yearFilter } = state;
 
     const handleClick = (el) => {
         if (type === 'sort') {
@@ -18,18 +18,18 @@ const SortDropdown = props => {
         }
     };
 
-    console.log(years);
+    console.log(state.yearFilter);
 
     const handleCheckbox = (e) => {
-        const yearsArray = years.map(el => el);
+        const yearsArray = yearFilter.map(el => el);
         if (e.target.checked) {
             yearsArray.push(e.target.value);
-            setYears(yearsArray);
+            dispatch({ type: "SET_YEAR_FILTER", payload: yearsArray});
         }
 
         if (!e.target.checked) {
             const removeFromArray = yearsArray.map(el => el).filter(el => el !== e.target.value)
-            setYears(removeFromArray)
+            dispatch({ type: "SET_YEAR_FILTER", payload: removeFromArray});
         }
         
     }

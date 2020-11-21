@@ -8,11 +8,16 @@ export const filterGames = (arr, input, yearFilter) => {
         }
     }
 
-    if (yearFilter) {
-        if (yearFilter !== 'All time') {
-            filteredArray = filteredArray.filter(el => el.released.substring(0, 4) === yearFilter);
-        }
-        return filteredArray;
+    if (yearFilter.length > 0) {
+
+        let yearFilteredArray = [];
+
+        yearFilter.sort((a, b) => b - a).forEach(year => {
+            filteredArray.forEach(el => {
+                if (el.released.substring(0, 4) === year) yearFilteredArray.push(el);
+            })
+        })
+        return yearFilteredArray;
     }
     
     return arr;

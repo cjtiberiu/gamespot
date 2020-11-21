@@ -4,7 +4,7 @@ import Reducer from './Reducer';
 const INITIAL_STATE = {
     sortBy: 'Latest',
     searchField: '',
-    yearFilter: '',
+    yearFilter: [],
     games: []
 };
 
