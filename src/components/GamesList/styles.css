@@ -1,7 +1,7 @@
 @media only screen and (min-width: 1080px) {
 
     .games-list {
-        justify-content: space-between !important;
+        justify-content: flex-start !important;
         flex-basis: auto !important;
     }
 

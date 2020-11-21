@@ -4,18 +4,21 @@ import { Context } from '../../store/Store';
 import './styles.css';
 
 import SortDropdown from './SortDropdown';
+import Dropdown from '../Dropdown';
 
 const Sort = props => {
 
     const [state, dispatch] = useContext(Context);
 
-    console.log(state);
+    const options = ['Latest', 'Rating', 'Release Date'];
+
+    console.log(state.sortBy);
 
     return (
         <div className='sort'>
-            <div>Sort by: </div>
+            <div>Sort by: {state.sortBy}</div>
             <i className="fas fa-angle-down"></i>
-            <SortDropdown />
+            <Dropdown options={options} type='sort' />
         </div>
     )
 };

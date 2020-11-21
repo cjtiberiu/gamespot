@@ -1,0 +1,10 @@
+.year-filter {
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.year-filter:hover .dropdown {
+    display: flex;
+    cursor: pointer;
+}

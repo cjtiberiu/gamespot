@@ -5,8 +5,6 @@ import './styles.css';
 
 const MapContainer = props => {
 
-    console.log(props);
-
     return (
         <div className='map'>
             

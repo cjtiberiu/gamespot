@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 
-.sort:hover .sort-dropdown {
+.sort:hover .dropdown {
     display: flex;
 }
 

@@ -10,8 +10,6 @@ const GameDetail = props => {
     const [game, setGame] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
-    console.log(game.genres);
-
     useEffect(()=> {
 
         window.scrollTo(0, 0);

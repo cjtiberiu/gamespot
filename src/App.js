@@ -17,6 +17,8 @@ const App = () => {
 
     useEffect(() => {
         setHeight(containerRef.current.scrollHeight);
+
+        console.log(containerRef);
     }, []);
 
     const setPageHeight = () => {
