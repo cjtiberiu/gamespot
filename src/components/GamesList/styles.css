@@ -16,5 +16,6 @@
     /* overflow-y: scroll;
     height: 80vh; */
     gap: 20px;
+    width: 100%;
     position: relative;
 }

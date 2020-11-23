@@ -1,13 +1,13 @@
-.year-filter {
+.genre-filter {
     display: flex;
     gap: 5px;
     position: relative;
 }
 
-.year-filter:hover {
+.genre-filter:hover {
     cursor: pointer;
 }
 
-.year-filter:hover .dropdown {
+.genre-filter:hover .dropdown {
     display: flex;
 }

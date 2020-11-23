@@ -9,6 +9,7 @@ import Spinner from '../../components/Spinner';
 import Sort from '../../components/Sort';
 import SearchInput from '../../components/SearchInput';
 import YearFilter from '../../components/YearFilter';
+import GenreFilter from '../../components/GenreFilter';
 
 const GamesPage = props => {
 
@@ -21,6 +22,8 @@ const GamesPage = props => {
 
     useEffect(() => {
         setPageHeight();
+
+        dispatch({ type: "CLEAR_FILTERS" });
 
         const getGames = async () => {
 
@@ -53,6 +56,7 @@ const GamesPage = props => {
                     <Sort />
                     <SearchInput />
                     <YearFilter />
+                    <GenreFilter />
                 </div>
                 
             </div>

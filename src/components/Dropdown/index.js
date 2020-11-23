@@ -8,7 +8,7 @@ const SortDropdown = props => {
     const { options, type } = props;
 
     const [state, dispatch] = useContext(Context);
-    const { yearFilter } = state;
+    const { yearFilter, genreFilter } = state;
 
     const handleClick = (el) => {
         if (type === 'sort') {
@@ -18,19 +18,34 @@ const SortDropdown = props => {
         }
     };
 
-    console.log(state.yearFilter);
-
     const handleCheckbox = (e) => {
-        const yearsArray = yearFilter.map(el => el);
-        if (e.target.checked) {
-            yearsArray.push(e.target.value);
-            dispatch({ type: "SET_YEAR_FILTER", payload: yearsArray});
+
+        if (type === 'year') {
+            const yearsArray = yearFilter.map(el => el);
+            if (e.target.checked) {
+                yearsArray.push(e.target.value);
+                dispatch({ type: "SET_YEAR_FILTER", payload: yearsArray});
+            }
+    
+            if (!e.target.checked) {
+                const removeFromArray = yearsArray.map(el => el).filter(el => el !== e.target.value)
+                dispatch({ type: "SET_YEAR_FILTER", payload: removeFromArray});
+            }
         }
 
-        if (!e.target.checked) {
-            const removeFromArray = yearsArray.map(el => el).filter(el => el !== e.target.value)
-            dispatch({ type: "SET_YEAR_FILTER", payload: removeFromArray});
+        if (type === 'genre') {
+            const genresArray = genreFilter.map(el => el);
+            if (e.target.checked) {
+                genresArray.push(e.target.value);
+                dispatch({ type: "SET_GENRE_FILTER", payload: genresArray});
+            }
+    
+            if (!e.target.checked) {
+                const removeFromArray = genresArray.map(el => el).filter(el => el !== e.target.value)
+                dispatch({ type: "SET_GENRE_FILTER", payload: removeFromArray});
+            }
         }
+        
         
     }
 
@@ -39,17 +54,20 @@ const SortDropdown = props => {
             {
                 type === 'sort' ? (
                     options.map(el => {
+                        if (el === state.sortBy) {
+                            return <div key={el} className='dropdown-option active' onClick={() => handleClick(el)}>{el}</div>
+                        }
                         return <div key={el} className='dropdown-option' onClick={() => handleClick(el)}>{el}</div>
                     })
                 ) : null
             }
             {
-                type === 'year' ? (
+                type === 'year' || type === 'genre' ? (
                     options.map(el => {
                         return (
 
                             <label key={el} className="checkbox-container">{el}
-                                <input className='checkbox' type='checkbox' value={el} name={el} onChange={e => handleCheckbox(e)} />
+                                <input className='checkbox' type='checkbox' value={el} name={el} onChange={e => handleCheckbox(e, type)} />
                                 <span className="checkmark"></span>
                             </label>
                         )

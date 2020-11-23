@@ -5,6 +5,7 @@ const INITIAL_STATE = {
     sortBy: 'Latest',
     searchField: '',
     yearFilter: [],
+    genreFilter: [],
     games: []
 };
 

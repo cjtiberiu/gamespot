@@ -8,6 +8,10 @@ const Reducer = (state, action) => {
             return { ...state, searchField: action.payload};
         case "SET_YEAR_FILTER":
             return { ...state, yearFilter: action.payload };
+        case "SET_GENRE_FILTER":
+            return { ...state, genreFilter: action.payload };
+        case "CLEAR_FILTERS":
+            return { ...state, searchField: '', yearFilter: [], genreFilter: [] };
         default:
             return state;
     }

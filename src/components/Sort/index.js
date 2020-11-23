@@ -12,8 +12,6 @@ const Sort = props => {
 
     const options = ['Latest', 'Rating', 'Release Date'];
 
-    console.log(state.sortBy);
-
     return (
         <div className='sort'>
             <div>Sort by: {state.sortBy}</div>

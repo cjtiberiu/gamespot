@@ -11,15 +11,20 @@ const GameBox = props => {
 
     const { game } = props;
 
+    const formatDate = (date) => {
+        const d = new Date(date);
+        return d.getDate() + '-' +  (d.getMonth() + 1) + '-' +  d.getFullYear();
+    }
+
     return (
             <div key={game.id} className='game' onClick={() => history.push(`games/${game.slug}`)}>
                 <div className='overlay'>
-                    <div className='text'>See more game details</div>
+                    <div className='text-box'>Game details</div>
                 </div>
                 <img className='game-img' src={game.background_image} />
                 <div className='game-content'>
                     <h2 className='game-title'>{game.name}</h2>
-                    <div className='game-releasedate info'>Released: {game.released}</div>
+                    <div className='game-releasedate info'>Released: {formatDate(game.released)}</div>
                     <div className='info'>Rating: <span className='game-rating'>{game.rating}</span> out of 5</div>
 
                 </div>

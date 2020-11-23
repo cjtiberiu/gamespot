@@ -11,13 +11,11 @@ const GamesList = props => {
 
     const [state, dispatch] = useContext(Context);
 
-    console.log(state);
-
     const { games } = state;
 
     const renderGames = () => {
 
-        const filteredGames = filterGames(games, state.searchField, state.yearFilter);
+        const filteredGames = filterGames(games, state.searchField, state.yearFilter, state.genreFilter);
 
         if (state.sortBy === 'Latest') {
 
