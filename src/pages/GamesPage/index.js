@@ -16,8 +16,8 @@ const GamesPage = props => {
     const [state, dispatch] = useContext(Context);
 
     const { setPageHeight } = props;
-    const [games, setGames] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [filtersMenu, setFiltersMenu] = useState(false);
 
 
     useEffect(() => {
@@ -52,13 +52,26 @@ const GamesPage = props => {
     return (
         <div className='games-area'>
             <div className='games-area__header'>
+                <div className='filters-button' onClick={() => setFiltersMenu(!filtersMenu)}>{`${filtersMenu ? 'Hide': 'Show'}`} Filters
+                {
+                    filtersMenu ? <i className="far fa-arrow-alt-circle-left"></i> : <i className="far fa-arrow-alt-circle-right"></i>
+                }
+                </div>
                 <div className='heading-primary'>
-                    <Sort />
-                    <SearchInput />
-                    <YearFilter />
-                    <GenreFilter />
+                    <Sort mobile={false} />
+                    <SearchInput mobile={false} />
+                    <YearFilter mobile={false} />
+                    <GenreFilter mobile={false} />
                 </div>
                 
+            </div>
+
+            <div className='mobile-filters-menu' style={{ 'display': `${filtersMenu ? 'flex' : 'none'}`}}>
+                <div className='close-filters-menu'><span className='x' onClick={() => setFiltersMenu(false)}>X</span></div>
+                <SearchInput mobile={true} />
+                <Sort mobile={true} />
+                <YearFilter mobile={true} />
+                <GenreFilter mobile={true} />
             </div>
 
             

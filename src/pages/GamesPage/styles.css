@@ -1,7 +1,21 @@
-@media only screen and (max-width: 1820px) and (min-width: 1080px) {
+@media only screen and (min-width: 1080px) {
+
+    .games-area {
+        margin-top: 50px !important;
+    }
+
     .heading-primary {
         font-size: 1.3rem !important;
         letter-spacing: 2px !important;
+        display: flex !important;
+    }
+
+    .filters-button {
+        display: none !important;
+    }
+
+    .mobile-filters-menu {
+        display: none !important;
     }
 }
 
@@ -9,13 +23,13 @@
 .games-area {
     top: 0;
     position: relative;
-    padding: 20px;
+    padding: 0 20px 10px 20px;
     color: rgb(197, 197, 197);
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 .heading-primary {
-    display: flex;
+
     justify-content: flex-start;
     gap: 35px;
     font-size: 1.75rem;
@@ -27,5 +41,96 @@
     text-shadow: 0 0 15px 12px black;
     margin-bottom: 25px;
     align-items: center;
+    display: none;
 }
 
+/* .filters-button {
+    position: absolute;
+    top: -50px;
+    padding: 5px;
+    left: -10px;
+    font-size: 1.5rem;
+} */
+
+.filters-button {
+    position: relative;
+    top: 0;
+    padding: 5px;
+    font-size: 1.5rem;
+    transform: translate(0, -50%);
+    text-align: center;
+}
+
+.filters-button i {
+    margin-left: 5px;
+}
+
+@keyframes leftToRight {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+
+.mobile-filters-menu {
+    padding-top: 20px;
+    flex-direction: column;
+    padding-left: 20px;
+    position: absolute;
+    left: -10px;
+    font-size: 1.75rem;
+    top: -20px;
+    width: 70%;
+    height: 85vh;
+    background-color: rgba(2,15,27, 1);
+    z-index: 6;
+    overflow-y: scroll;
+    animation: leftToRight .3s;
+}
+
+.close-filters-menu {
+    margin-bottom: 20px;
+    justify-content: flex-end;
+    width: 95%;
+    display: flex;
+}
+
+.mobile-filters-menu .sort {
+    margin-bottom: 20px;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.mobile-filters-menu .sort i {
+    display: none;
+}
+
+.mobile-filters-menu .search-input {
+    margin-bottom: 20px;
+    width: 90%;
+    height: 30px;
+}
+
+.mobile-filters-menu .year-filter {
+    margin-bottom: 20px;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.mobile-filters-menu .genre-filter {
+    margin-bottom: 20px;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.mobile-filters-menu .year-filter i {
+    display: none;
+}
+
+.mobile-filters-menu .genre-filter i {
+    display: none
+}

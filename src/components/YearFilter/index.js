@@ -35,7 +35,9 @@ const YearFilter = props => {
         <div className='year-filter'>
             <div>Year</div>
             <i className="fas fa-angle-down"></i>
-            <Dropdown options={years} type='year' />
+            {
+                props.mobile ? <Dropdown options={years} mobile={true} type='year' /> : <Dropdown options={years} type='year' />
+            }
         </div>
     )
 }

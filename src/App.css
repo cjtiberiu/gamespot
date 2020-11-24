@@ -44,6 +44,7 @@ body {
 
 .app-container {
     background-image: linear-gradient(rgb(1, 14, 26),rgba(63, 78, 90, 0.9)), url('./assets/img/second-cover.jpg');
+    /* background-image: linear-gradient(rgba(72, 87, 100, 0.9),rgba(63, 78, 90, 0.9)), url('./assets/img/second-cover.jpg'); */
     background-size: cover;
     background-position: top;
     position: absolute;

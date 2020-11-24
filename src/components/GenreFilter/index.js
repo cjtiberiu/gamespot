@@ -36,7 +36,9 @@ const GenreFilter = props => {
         <div className='genre-filter'>
             <div>Genre</div>
             <i className="fas fa-angle-down"></i>
-            <Dropdown options={genres} type='genre' />
+            {
+                !props.mobile ? <Dropdown options={genres} type='genre' /> : <Dropdown options={genres} mobile={true} type='genre' />
+            }
         </div>
     )
 };

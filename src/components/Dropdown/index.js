@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { Context } from '../../store/Store';
 
+import {ReactComponent as Xbutton} from '../../assets/img/xbutton.svg';
+
 import './styles.css';
 
 const SortDropdown = props => {
@@ -50,7 +52,8 @@ const SortDropdown = props => {
     }
 
     return (
-        <div className='dropdown'>
+
+        <div className={`${props.mobile ? 'mobile-dropdown' : 'dropdown'}`}>
             {
                 type === 'sort' ? (
                     options.map(el => {
@@ -68,7 +71,7 @@ const SortDropdown = props => {
 
                             <label key={el} className="checkbox-container">{el}
                                 <input className='checkbox' type='checkbox' value={el} name={el} onChange={e => handleCheckbox(e, type)} />
-                                <span className="checkmark"></span>
+                                <span className="checkmark"><Xbutton /></span>
                             </label>
                         )
                     })

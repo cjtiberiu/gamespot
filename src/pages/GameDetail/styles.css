@@ -2,19 +2,42 @@
 
     .game-detail {
         flex-direction: row !important;
-        
+        justify-content: space-between; 
+        margin-top: 100px !important;  
+    }
+
+    .game-detail__images {
+        justify-content: flex-start !important;
+    }
+    
+
+    .game-detail__left-container {
+        width: 50% !important;
     }
 
     .game-detail__about {
         overflow-y: scroll !important;
+        width: 50%;
     }
 
     .game-detail__img {
-        width: 50% !important;
+        width: 100% !important;
+        height: 40vh !important;
     }
 
     .game-detail__title {
         margin-top: 0 !important;
+        display: block !important;
+    }
+
+    .game-detail__about {
+        margin-left: 15px !important;
+        font-size: 1rem !important;
+        
+    }
+
+    .mobile-game-title {
+        display: none;
     }
 }
 
@@ -22,7 +45,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 40px;
     position: relative;
     color: white;
     height: 80vh;
@@ -30,14 +53,33 @@
     
 }
 
-.game-detail__about {
-    margin-left: 15px;
-    
+.game-detail__images {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
 }
+
+.game-detail__smallimg {
+    width: 20px;
+    height: 20px;
+}
+
+.game-detail__about {
+    font-size: 1.2rem;
+}
+
 
 .game-detail__title {
     letter-spacing: 2px;
     margin-top: 15px;
+    display: none;
+}
+
+.mobile-game-title {
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .game-detail__description {
@@ -50,7 +92,11 @@
 
 .game-detail__img {
     width: 100%;
-    height: 40vh;
+    height: 25vh;
+}
+
+.active-image {
+    outline: 2px solid lightblue;
 }
 
 h3 {

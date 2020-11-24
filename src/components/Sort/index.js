@@ -10,13 +10,16 @@ const Sort = props => {
 
     const [state, dispatch] = useContext(Context);
 
-    const options = ['Latest', 'Rating', 'Release Date'];
+    const options = ['Our Latest', 'Rating', 'Release Date'];
 
     return (
         <div className='sort'>
             <div>Sort by: {state.sortBy}</div>
             <i className="fas fa-angle-down"></i>
-            <Dropdown options={options} type='sort' />
+            {
+                props.mobile ? <Dropdown options={options} mobile={true} type='sort' /> : <Dropdown options={options} type='sort' />
+            }
+            
         </div>
     )
 };

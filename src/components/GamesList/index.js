@@ -13,11 +13,13 @@ const GamesList = props => {
 
     const { games } = state;
 
+    console.log(games);
+
     const renderGames = () => {
 
         const filteredGames = filterGames(games, state.searchField, state.yearFilter, state.genreFilter);
 
-        if (state.sortBy === 'Latest') {
+        if (state.sortBy === 'Our Latest') {
 
             return filteredGames.map(game => {
                 return <GameBox key={game.id} game={game} />

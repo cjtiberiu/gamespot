@@ -1,18 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
+import { Context } from '../../store/Store';
 import axios from 'axios';
 
 import './styles.css';
+import { SmallImage } from './styles';
 
 import Spinner from '../../components/Spinner';
 
 const GameDetail = props => {
 
+    const [state, dispatch] = useContext(Context);
     const [game, setGame] = useState({});
+    const [extraInfo, setExtraInfo] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const smallImage = useRef();
+
+    const [background, setBackground] = useState('');
+
+    console.log(smallImage);
+
+    console.log(state.games);
+    console.log(props.match.params.game);
 
     useEffect(()=> {
 
         window.scrollTo(0, 0);
+
+        const extra = state.games.find(el => el.slug === props.match.params.game);
+
+        setExtraInfo(extra);
 
         const getGame = async () => {
             try {
@@ -21,6 +37,8 @@ const GameDetail = props => {
                 setIsLoading(false);
 
                 setGame(result.data);
+
+                setBackground(result.data.background_image);
             } catch (err) {
                 console.log(err);
             }
@@ -31,12 +49,35 @@ const GameDetail = props => {
         
     }, [])
 
+    const changeBackground = image => {
+        setBackground(image);
+    }
+
     return (
         <div>
             {
                 isLoading ? <Spinner /> : (
                     <div className='game-detail'>
-                        <img className='game-detail__img' src={game.background_image} alt={game.name} />
+                        <div className='game-detail__left-container'>
+                            <h1 className='mobile-game-title'>{game.name}</h1>
+                            <img className='game-detail__img' src={background} alt={game.name} />
+                            <div className='game-detail__images'>
+                            
+                            {
+                                !extraInfo ? null : (
+                                    extraInfo.short_screenshots.map(el => {
+                                        if (el.image === background) {
+                                            return <SmallImage ref={smallImage} key={el.id} className='game-detail__smallimg active-image' src={el.image} alt={el.image} onClick={() => changeBackground(el.image)} />
+                                        }
+                                        return <SmallImage ref={smallImage} key={el.id} className='game-detail__smallimg' src={el.image} alt={el.image} onClick={() => changeBackground(el.image)} />
+                                    })
+                                )
+                            }
+
+                            </div>
+
+                        </div>
+                        
                         <div className='game-detail__about'>
                             <h1 className='game-detail__title'>{game.name}</h1>
                             <div className='game-detail__description detail-info'>{game.description_raw}</div>
@@ -60,6 +101,7 @@ const GameDetail = props => {
                     </div>
                 )
             }
+
         </div>
     )
 };
