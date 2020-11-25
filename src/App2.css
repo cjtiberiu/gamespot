@@ -1,14 +1,15 @@
 
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1080px) {
 
     html {
         font-size: 16px !important;
     }
 
     .container {
-        width: 80% !important;
+        width: 80%;
+        max-width: 80%;
     }
 }
 

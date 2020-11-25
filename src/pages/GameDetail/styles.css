@@ -1,9 +1,10 @@
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1201px) {
 
     .game-detail {
         flex-direction: row !important;
         justify-content: space-between; 
-        margin-top: 100px !important;  
+        margin-top: 100px !important; 
+        height: 70vh !important;
     }
 
     .game-detail__images {
@@ -18,6 +19,11 @@
     .game-detail__about {
         overflow-y: scroll !important;
         width: 50%;
+    }
+
+    .game-detail__smallimg {
+        width: 120px !important;
+        height: 60px !important;
     }
 
     .game-detail__img {
@@ -41,14 +47,16 @@
     }
 }
 
+
+
 .game-detail {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 40px;
     position: relative;
-    color: white;
-    height: 80vh;
+    color: rgb(236, 231, 231, 0.95);
+    height: 70vh;
     font-weight: 300;
     
 }
@@ -93,6 +101,7 @@
 .game-detail__img {
     width: 100%;
     height: 25vh;
+    outline: 2px solid rgba(196, 189, 189, 0.24);
 }
 
 .active-image {

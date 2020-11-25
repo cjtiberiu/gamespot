@@ -1,11 +1,7 @@
-/* @media only screen and (min-width: 1201px) {
+/* @media only screen and (min-width: 1820px) {
     .game {
-        width: 15% !important;
-        height: 320px !important;
-    }
-
-    .game-img {
-        height: 130px !important;
+        width: 15.5% !important;
+        height: 350px !important;
     }
 
     .game-title {
@@ -16,16 +12,12 @@
 @media only screen and (min-width: 1201px) {
 
     .game {
-        width: 220px !important;
+        width: 210px !important;
         height: 300px !important;
     }
 
     .game-img {
         height: 120px !important;
-    }
-
-    .info {
-        font-size: 1rem !important;
     }
 
     .game-title {
@@ -34,17 +26,17 @@
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
 
     .game {
-        width: 220px !important;
+        width: 30% !important;
     }
 }
 
-@media only screen and (min-width: 427px) and (max-width: 767px) {
+@media only screen and (min-width: 500px) and (max-width: 768px) {
 
     .game {
-        width: 220px !important;
+        width: 45% !important;
     }
 }
 
@@ -53,7 +45,7 @@
 .game {
     text-align: center;
     position: relative;
-    width: 250px;
+    width: 80%;
     height: 270px;
     /* box-shadow: 0 0 12px rgba(0,0,0,0.12); */
     color: rgba(197, 197, 197, 0.8);
@@ -71,8 +63,12 @@
     
 }
 
+.game:hover {
+    outline: 1px solid lightblue;
+}
 
-  .game:before {
+
+  /* .game:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -110,7 +106,7 @@
     opacity: 0;
     transition: .5s;
     background-image: linear-gradient( rgba(14, 49, 82, 0.2), rgb(5, 23, 41));
-}
+} */
 
 .text-box {
     color: white;
@@ -120,7 +116,7 @@
     padding: 10px;
     font-weight: 500;
     white-space: nowrap;
-    top: 80%;
+    top: 75%;
     left: 50%;
     -webkit-transform: translate(-50%, -40%);
     -ms-transform: translate(-50%, -40%);
@@ -140,7 +136,7 @@
 
 .info {
     margin-top: 10px;
-    font-size: 1.25rem;
+    font-style: italic;
 }
 
 .game:hover {
@@ -154,8 +150,7 @@
 
 .game-title {
     position: relative;
-    height: 40px;
-    font-size: 1.5rem;
+    height: 30px;
     letter-spacing: 1px;
     font-weight: 500 !important;
     color: rgba(197, 197, 197, 0.9);
@@ -165,9 +160,7 @@
 .game-img {
     width: 100%;
     height: 150px;
-    max-height: 150px;
-    height: auto;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
 }
 
 .game-rating {

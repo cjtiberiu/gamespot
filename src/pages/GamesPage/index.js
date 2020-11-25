@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import './styles.css';
 
+import { useOuterClick } from '../../hooks/OuterClick';
+
 import GamesList from '../../components/GamesList';
 import Spinner from '../../components/Spinner';
 import Sort from '../../components/Sort';
@@ -18,6 +20,10 @@ const GamesPage = props => {
     const { setPageHeight } = props;
     const [isLoading, setIsLoading] = useState(true);
     const [filtersMenu, setFiltersMenu] = useState(false);
+
+    const innerRef = useOuterClick(e => {
+        if (filtersMenu) setFiltersMenu(false);
+    })
 
 
     useEffect(() => {
@@ -52,10 +58,8 @@ const GamesPage = props => {
     return (
         <div className='games-area'>
             <div className='games-area__header'>
-                <div className='filters-button' onClick={() => setFiltersMenu(!filtersMenu)}>{`${filtersMenu ? 'Hide': 'Show'}`} Filters
-                {
-                    filtersMenu ? <i className="far fa-arrow-alt-circle-left"></i> : <i className="far fa-arrow-alt-circle-right"></i>
-                }
+                <div className='filters-button' onClick={() => setFiltersMenu(!filtersMenu)}>Show Filters
+                <i className="far fa-arrow-alt-circle-right"></i>
                 </div>
                 <div className='heading-primary'>
                     <Sort mobile={false} />
@@ -66,8 +70,8 @@ const GamesPage = props => {
                 
             </div>
 
-            <div className='mobile-filters-menu' style={{ 'display': `${filtersMenu ? 'flex' : 'none'}`}}>
-                <div className='close-filters-menu'><span className='x' onClick={() => setFiltersMenu(false)}>X</span></div>
+            <div className='mobile-filters-menu' ref={innerRef} style={{ 'display': `${filtersMenu ? 'flex' : 'none'}`}}>
+                {/* <div className='close-filters-menu'><span className='x' onClick={() => setFiltersMenu(false)}>X</span></div> */}
                 <SearchInput mobile={true} />
                 <Sort mobile={true} />
                 <YearFilter mobile={true} />
@@ -78,7 +82,7 @@ const GamesPage = props => {
 
             
             {
-                isLoading ? <Spinner /> : <GamesList setPageHeight={setPageHeight} />
+                isLoading ? <Spinner /> : <GamesList filtersMenu={filtersMenu} setPageHeight={setPageHeight} />
             }
          
 

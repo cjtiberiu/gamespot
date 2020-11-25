@@ -9,17 +9,17 @@ const GameBox = props => {
 
     const history = useHistory();
 
-    const { game } = props;
+    const { game, filtersMenu } = props;
 
     const formatDate = (date) => {
         const d = new Date(date);
-        return d.getDate() + '-' +  (d.getMonth() + 1) + '-' +  d.getFullYear();
+        return d.getDate() + '.' +  (d.getMonth() + 1) + '.' +  d.getFullYear();
     }
 
     return (
-            <div key={game.id} className='game' onClick={() => history.push(`games/${game.slug}`)}>
+            <div key={game.id} className='game'>
                 <div className='overlay'>
-                    <div className='text-box'>Game details</div>
+                    <div className='text-box' onClick={() => props.filtersMenu ? null : history.push(`games/${game.slug}`)}>Game details</div>
                 </div>
                 <img className='game-img' src={game.background_image} />
                 <div className='game-content'>

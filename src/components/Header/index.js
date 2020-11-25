@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
@@ -6,6 +6,7 @@ import './styles.css';
 const Header = () => {
 
     const [displayMenu, setDisplayMenu] = useState(false);
+    
 
     const handleNavMenu = () => {
         displayMenu ? setDisplayMenu(false) : setDisplayMenu(true);

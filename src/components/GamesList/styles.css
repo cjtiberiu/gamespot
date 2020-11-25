@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 769px) {
 
     .games-list {
         justify-content: flex-start !important;
@@ -15,7 +15,7 @@
     margin: 0 auto;
     /* overflow-y: scroll;
     height: 80vh; */
-    gap: 20px;
+    gap: 15px;
     width: 100%;
     position: relative;
 }

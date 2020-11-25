@@ -1,3 +1,10 @@
+@media only screen and (min-width: 1080px) {
+  .checkmark {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+
 @keyframes growDown {
   0% {
     transform: scaleY(0)
@@ -75,8 +82,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 22px;
     background-color: rgb(53, 55, 58);
     border-radius: 50%;
   }
@@ -99,6 +106,7 @@
   .checkbox-container input:checked ~ .checkmark svg {
     background-color: inherit;
     display: block;
+    position: relative;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */

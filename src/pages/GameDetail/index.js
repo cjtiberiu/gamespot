@@ -9,6 +9,8 @@ import Spinner from '../../components/Spinner';
 
 const GameDetail = props => {
 
+    console.log(props);
+
     const [state, dispatch] = useContext(Context);
     const [game, setGame] = useState({});
     const [extraInfo, setExtraInfo] = useState({});
@@ -19,8 +21,7 @@ const GameDetail = props => {
 
     console.log(smallImage);
 
-    console.log(state.games);
-    console.log(props.match.params.game);
+    console.log(game);
 
     useEffect(()=> {
 
@@ -81,6 +82,22 @@ const GameDetail = props => {
                         <div className='game-detail__about'>
                             <h1 className='game-detail__title'>{game.name}</h1>
                             <div className='game-detail__description detail-info'>{game.description_raw}</div>
+                            <div className='detail-info'>
+                                <h3>Developed by</h3>
+                                <div className='game-detail__genres'>
+                                    {
+                                        !game.developers ? null : game.developers.map(el => <div key={el.id}>{el.name}</div>)
+                                    }
+                                </div>
+                            </div>
+                            <div className='detail-info'>
+                                <h3>Published by</h3>
+                                <div className='game-detail__genres'>
+                                    {
+                                        !game.publishers ? null : game.publishers.map(el => <div key={el.id}>{el.name}</div>)
+                                    }
+                                </div>
+                            </div>
                             <div className='game-detail_rating detail-info'>
                                 <h3>Rating</h3>
                                 <div style={{'marginTop': '5px'}}>{game.rating} / 5</div>

@@ -8,10 +8,10 @@
         width: auto !important;
     }
     
-    svg {
+    /* svg {
         width: 500px !important;
         top: 50vh !important;
-    }
+    } */
 }
 
 
@@ -25,10 +25,10 @@
     text-align: center;
 }
 
-svg {
+/* svg {
     width: 200px;
     right: 0;
     position: absolute;
     top: 25vh;
     opacity: 0.4;
-}
+} */

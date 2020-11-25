@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 769px) {
 
     .games-area {
         margin-top: 50px !important;
@@ -20,12 +20,17 @@
 }
 
 
+
+
 .games-area {
-    top: 0;
+    top: 10px;
     position: relative;
-    padding: 0 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 10px 0;
     color: rgb(197, 197, 197);
     margin-top: 35px;
+    margin: 0 auto;
 }
 
 .heading-primary {
@@ -55,7 +60,9 @@
 .filters-button {
     position: relative;
     top: 0;
-    padding: 5px;
+    left: 15px;
+    width: 50%;
+    padding: 10px;
     font-size: 1.5rem;
     transform: translate(0, -50%);
     text-align: center;
@@ -87,9 +94,10 @@
     width: 70%;
     height: 85vh;
     background-color: rgba(2,15,27, 1);
-    z-index: 6;
+    z-index: 3;
     overflow-y: scroll;
     animation: leftToRight .3s;
+    border: 1px solid rgba(197, 197, 197, 0.2);
 }
 
 .close-filters-menu {
