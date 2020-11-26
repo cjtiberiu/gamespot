@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Context } from '../../store/Store';
 import axios from 'axios';
 
-import './styles.css';
+import './styles2.css';
 
 import { useOuterClick } from '../../hooks/OuterClick';
 
@@ -25,9 +25,8 @@ const GamesPage = props => {
         if (filtersMenu) setFiltersMenu(false);
     })
 
-
     useEffect(() => {
-        setPageHeight();
+        //setPageHeight();
 
         dispatch({ type: "CLEAR_FILTERS" });
 
@@ -41,7 +40,7 @@ const GamesPage = props => {
 
                 setIsLoading(false);
     
-                props.setPageHeight()
+                //props.setPageHeight()
             } catch(err) {
                 console.log(err)
             }
@@ -60,7 +59,7 @@ const GamesPage = props => {
             <div className='games-area__header'>
                 
                 <div className='filters-button' onClick={() => setFiltersMenu(!filtersMenu)}>
-                    <i class="fas fa-filter"></i>
+                    <i className="fas fa-filter"></i>
                     <span>Filters</span>
                 </div>
                 <div className='heading-primary'>

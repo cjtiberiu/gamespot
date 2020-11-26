@@ -13,8 +13,6 @@ const GamesList = props => {
 
     const { games } = state;
 
-    console.log(games);
-
     const renderGames = () => {
 
         const filteredGames = filterGames(games, state.searchField, state.yearFilter, state.genreFilter);

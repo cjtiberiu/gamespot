@@ -1,34 +1,38 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-import './styles.css';
+import './styles2.css';
+
+import { ReactComponent as Controller } from '../../assets/svg/controller.svg';
 
 const Header = props => {
 
     const [displayMenu, setDisplayMenu] = useState(false);
 
-    console.log(props);
     
 
     const handleNavMenu = () => {
         displayMenu ? setDisplayMenu(false) : setDisplayMenu(true);
     }
 
-    useEffect(() => {
-        console.log(displayMenu);
-    }, [displayMenu])
 
     return (
         <header className='header'>
 
             <div className='container'>
 
-                <div className='page-title'>
+                {/* <div className='page-title'>
                     { props.location.pathname === '/games' ? 'Games' : null}
                     { props.location.pathname === '/contact' ? 'Contact' : null}
-                </div>
+                </div> */}
+
+                
 
                 <div className='header-nav active-nav'>
+                    <div className='logo' onClick={() => props.history.push('/')}>
+                        <Controller />
+                        <span className='logo-text'>GAMESPOT</span>
+                    </div>
                     <div className='nav'>
                         <Link to='/games'><div id='games' className='nav-link'>OUR GAMES</div></Link>
                         <Link to='/contact'><div id='contact' className='nav-link'>HOW TO FIND US</div></Link>
@@ -36,6 +40,11 @@ const Header = props => {
                 </div>
 
                 <div className='mobile-nav'>
+
+                    <div className='logo' onClick={() => props.history.push('/')}>
+                        <Controller />
+                        <span className='logo-text'>GAMESPOT</span>
+                    </div>
                     
                     <div className={`menu-btn ${displayMenu ? 'open' : ''}`} onClick={handleNavMenu}>
                         <div className="menu-btn__burger"></div>

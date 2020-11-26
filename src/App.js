@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
+import { Context } from './store/Store';
+import axios from 'axios';
 
-import './App.css';
+import './App2.css';
 
 import HomePage from './pages/HomePage';
 import GamesPage from './pages/GamesPage';
@@ -17,13 +19,14 @@ const App = () => {
     const containerRef = useRef();
 
     useEffect(() => {
-        setHeight(containerRef.current.scrollHeight);
+        //setHeight(containerRef.current.scrollHeight);
+
 
     }, []);
 
-    const setPageHeight = () => {
-        setHeight(containerRef.current.scrollHeight);
-    }
+    // const setPageHeight = () => {
+    //     setHeight(containerRef.current.scrollHeight);
+    // }
 
 
     return (
@@ -36,7 +39,7 @@ const App = () => {
                     <Switch>
 
                         <Route exact path='/' component={HomePage} />
-                        <Route exact path='/games' component={() => <GamesPage setPageHeight={setPageHeight} />} />
+                        <Route exact path='/games' component={() => <GamesPage />} />
                         <Route exact path='/games/:game' component={GameDetail} />
                         <Route exact path='/contact' component={ContactPage} />
                         

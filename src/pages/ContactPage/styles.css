@@ -7,5 +7,19 @@
 .contact-page {
     margin-top: 0;
     color: rgba(197, 197, 197);
-    font-size: 2rem;
+    display: flex;
+    font-size: 1.25rem;
+    gap: 10px;
+    flex-direction: column;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.contact-page .icon {
+    width: 30px;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
 }

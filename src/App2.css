@@ -1,7 +1,7 @@
 
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1201px) {
 
     html {
         font-size: 16px !important;
@@ -25,7 +25,7 @@
 html {
     font-size: 12px;
     min-height: 100vh;
-    background-color: rgb(1, 14, 26);
+    background-color: rgb(6, 40, 71);
     
 }
 
@@ -40,11 +40,11 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    background-color: rgb(6, 40, 71);
 
 }
 
 .app-container {
-    background-image: linear-gradient(rgb(1, 14, 26),rgba(63, 78, 90, 0.9)), url('./assets/img/second-cover.jpg');
     /* background-image: linear-gradient(rgba(72, 87, 100, 0.9),rgba(63, 78, 90, 0.9)), url('./assets/img/second-cover.jpg'); */
     background-size: cover;
     background-position: top;
@@ -65,4 +65,5 @@ body {
     width: 100%;
     top: 90px;
     position: absolute;
+    margin-bottom: 50px;
 }

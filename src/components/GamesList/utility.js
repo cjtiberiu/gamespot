@@ -31,15 +31,7 @@ export const filterGames = (arr, input, yearFilter, genreFilter) => {
 
         if (yearFilter.length > 0) {
 
-            console.log('start');
-
-            console.log(nextFilteredArray);
-
             nextFilteredArray.forEach(el => {
-
-                console.log(genreFilteredArray);
-
-                console.log(el);
 
                 genreFilter.forEach(genre => {
 

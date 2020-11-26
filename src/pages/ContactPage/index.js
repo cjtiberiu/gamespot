@@ -12,7 +12,22 @@ const ContactPage = () => {
 
     return (
         <div className='contact-page'>
-            <div>Location</div>
+
+            <div className='info-container'>
+                <i className="fas fa-phone-square-alt icon"></i>
+                <span className='contact-info'>000000000</span>
+            </div>
+            <div className='info-container'>
+                <i className="fab fa-facebook-square icon"></i>
+                <span className='contact-info'>facebook...</span>
+            </div>
+            <div className='info-container'>
+                <i className="fas fa-map-marker-alt icon"></i>
+                <span className='contact-info'>Location</span>
+            </div>
+            
+            
+            <div></div>
             <MapContainer />
         </div>
     )

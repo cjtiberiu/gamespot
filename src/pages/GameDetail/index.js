@@ -2,14 +2,12 @@ import React, { useState, useEffect, useContext, useRef } from 'react';
 import { Context } from '../../store/Store';
 import axios from 'axios';
 
-import './styles.css';
+import './styles2.css';
 import { SmallImage } from './styles';
 
 import Spinner from '../../components/Spinner';
 
 const GameDetail = props => {
-
-    console.log(props);
 
     const [state, dispatch] = useContext(Context);
     const [game, setGame] = useState({});
@@ -18,10 +16,6 @@ const GameDetail = props => {
     const smallImage = useRef();
 
     const [background, setBackground] = useState('');
-
-    console.log(smallImage);
-
-    console.log(game);
 
     useEffect(()=> {
 
@@ -48,7 +42,7 @@ const GameDetail = props => {
 
         getGame();
         
-    }, [])
+    }, [state.games])
 
     const changeBackground = image => {
         setBackground(image);
@@ -59,6 +53,7 @@ const GameDetail = props => {
             {
                 isLoading ? <Spinner /> : (
                     <div className='game-detail'>
+                        <div className='background-img'></div>
                         <div className='game-detail__left-container'>
                             <h1 className='mobile-game-title'>{game.name}</h1>
                             <img className='game-detail__img' src={background} alt={game.name} />

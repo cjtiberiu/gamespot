@@ -12,6 +12,8 @@ const Reducer = (state, action) => {
             return { ...state, genreFilter: action.payload };
         case "CLEAR_FILTERS":
             return { ...state, searchField: '', yearFilter: [], genreFilter: [] };
+        case "SET_LOADING_FALSE":
+            return { ...state, loadingGames: false };
         default:
             return state;
     }

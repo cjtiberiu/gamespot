@@ -29,7 +29,7 @@ const YearFilter = props => {
         getYears();
             
 
-    }, []);
+    }, [state.games]);
 
     return (
         <div className='year-filter'>

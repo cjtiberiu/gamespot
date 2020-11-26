@@ -30,7 +30,7 @@ const GenreFilter = props => {
         getGenres();
             
 
-    }, []);
+    }, [state.games]);
 
     return (
         <div className='genre-filter'>

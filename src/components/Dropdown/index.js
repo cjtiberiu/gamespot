@@ -3,7 +3,7 @@ import { Context } from '../../store/Store';
 
 import {ReactComponent as Xbutton} from '../../assets/img/xbutton.svg';
 
-import './styles.css';
+import './styles2.css';
 
 const SortDropdown = props => {
 

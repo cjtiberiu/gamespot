@@ -6,7 +6,8 @@ const INITIAL_STATE = {
     searchField: '',
     yearFilter: [],
     genreFilter: [],
-    games: []
+    games: [],
+    loadingGames: true
 };
 
 const Store = ({children}) => {

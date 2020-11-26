@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import './styles.css';
+import './styles2.css';
 
 import Image from '../../assets/img/first-cover.jpg';
 
@@ -17,15 +17,15 @@ const GameBox = props => {
     }
 
     return (
-            <div key={game.id} className='game'>
+            <div key={game.id} className='game' onClick={() => props.filtersMenu ? null : history.push(`games/${game.slug}`)}>
                 <div className='overlay'>
-                    <div className='text-box' onClick={() => props.filtersMenu ? null : history.push(`games/${game.slug}`)}>Game details</div>
+                    <div className='text-box'>Game details</div>
                 </div>
                 <img className='game-img' src={game.background_image} />
                 <div className='game-content'>
                     <h2 className='game-title'>{game.name}</h2>
-                    <div className='game-releasedate info'>Released: {formatDate(game.released)}</div>
-                    <div className='info'>Rating: <span className='game-rating'>{game.rating}</span> out of 5</div>
+                    <div className='game-releasedate info'><span className='info-span'>Released:</span>  <span className='info-span-data'>{formatDate(game.released)}</span></div>
+                    <div className='info'><span className='info-span'>Rating: </span><span className='info-span-data'><span className='game-rating'>{game.rating}</span> / 5</span></div>
 
                 </div>
             </div>

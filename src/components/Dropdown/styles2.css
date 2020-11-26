@@ -1,0 +1,137 @@
+@media only screen and (min-width: 1080px) {
+  .checkmark {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0)
+  }
+  80% {
+    transform: scaleY(1.1)
+  }
+  100% {
+    transform: scaleY(1)
+  }
+}
+
+.dropdown {
+    flex-direction: column;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    width: auto;
+    padding: 20px;
+    outline: none;
+    z-index: 5;
+    background-color: rgb(3, 28, 51);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    display: none;
+    text-align: center;
+    animation: growDown .2s ease-in-out forwards;
+}
+
+.mobile-dropdown {
+  font-size: 1.3rem;
+}
+
+
+.dropdown-option {
+    white-space: nowrap;
+    transition: all .3s ease;
+    
+}
+
+.dropdown-option:hover {
+    color: white;
+}
+
+.dropdown-option.active {
+  color: white;
+}
+
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: rgb(53, 55, 58);
+    border-radius: 50%;
+  }
+
+  .checkmark svg {
+    display: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: rgba(191, 205, 216, 0.4);
+    border-radius: 50%;
+    
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-container input:checked ~ .checkmark svg {
+    background-color: inherit;
+    display: block;
+    position: relative;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+    background-color: rgba(3,16,28, 0.9);;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    border-radius: 50%;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-radius: 50%;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
