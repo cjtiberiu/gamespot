@@ -10,6 +10,8 @@ const YearFilter = props => {
     const [state, dispatch] = useContext(Context);
     const [years, setYears] = useState([]);
 
+    console.log('YEAR FILTER RENDER');
+
     useEffect(() => {
         const getYears = () => {
 

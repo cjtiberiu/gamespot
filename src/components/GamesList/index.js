@@ -13,25 +13,34 @@ const GamesList = props => {
 
     const { games } = state;
 
+    console.log('GAMELIST RENDER');
+
     const renderGames = () => {
 
         const filteredGames = filterGames(games, state.searchField, state.yearFilter, state.genreFilter);
 
-        if (state.sortBy === 'Our Latest') {
+        if (filteredGames.length === 0) {
 
-            return filteredGames.map(game => {
-                return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />
-            })
-        } else if (state.sortBy === 'Rating') {
+            return <div className='no-games'>There are no games to show</div>
 
-            return filteredGames.map(el => el).sort((a, b) => b.rating - a.rating).map(game => {
-                return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />
-            })
-        } else if (state.sortBy === 'Release Date') {
+        } else {
 
-            return filteredGames.map(el => el).sort((a, b) => new Date(b.released) - new Date(a.released)).map(game => {
-                return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />
-            })
+            if (state.sortBy === 'Our Latest') {
+
+                return filteredGames.map(game => {
+                    return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />
+                })
+            } else if (state.sortBy === 'Rating') {
+    
+                return filteredGames.map(el => el).sort((a, b) => b.rating - a.rating).map(game => {
+                    return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />
+                })
+            } else if (state.sortBy === 'Release Date') {
+    
+                return filteredGames.map(el => el).sort((a, b) => new Date(b.released) - new Date(a.released)).map(game => {
+                    return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />
+                })
+            }
         }
 
     }

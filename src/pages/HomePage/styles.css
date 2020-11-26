@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1201px) {
     .title {
         color: rgba(197, 197, 197, 0.9);
         letter-spacing: 17px !important;
@@ -12,6 +12,10 @@
     .homepage .controller-svg {
         width: 500px !important;
         top: 50vh !important;
+    }
+
+    .list-of-games {
+        width: auto;
     }
 }
 
@@ -54,6 +58,8 @@
 
 .list-of-games {
     position: absolute;
+    width: auto;
+    white-space: nowrap;
     top: 50%;
     left: 50%;
     font-size: 2rem;

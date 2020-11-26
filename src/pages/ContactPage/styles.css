@@ -1,15 +1,15 @@
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1201px) {
     .contact-page {
         margin-top: 80px !important;
+        margin-left: 20px;
     }
 }
 
 .contact-page {
-    margin-top: 0;
+    margin-top: 30px;
     color: rgba(197, 197, 197);
     display: flex;
-    font-size: 1.25rem;
-    gap: 10px;
+    font-size: 1.5rem;
     flex-direction: column;
     font-weight: 300;
     letter-spacing: 1px;
@@ -17,9 +17,25 @@
 
 .contact-page .icon {
     width: 30px;
+    margin-right: 5px;
 }
 
 .info-container {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
+}
+
+.contact-info:hover {
+    cursor: pointer;
+}
+
+.fa-map-marker-alt {
+    margin-left: 1px;
+}
+
+.divider {
+    margin-top: 15px;
+    border: 1px solid white;
+    width: 100%;
 }

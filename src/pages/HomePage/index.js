@@ -16,7 +16,7 @@ const HomePage = props => {
             </div>
             {/* <div className='title'><Title /></div> */}
             <div className='list-of-games' onClick={() => props.history.push('/games')}>
-                See our list of games
+                Our list of games
             </div>
             {/* <div  className='controller-svg'><Controller /></div> */}
         </div>

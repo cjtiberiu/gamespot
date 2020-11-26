@@ -21,13 +21,6 @@ const Header = props => {
 
             <div className='container'>
 
-                {/* <div className='page-title'>
-                    { props.location.pathname === '/games' ? 'Games' : null}
-                    { props.location.pathname === '/contact' ? 'Contact' : null}
-                </div> */}
-
-                
-
                 <div className='header-nav active-nav'>
                     <div className='logo' onClick={() => props.history.push('/')}>
                         <Controller />

@@ -3,6 +3,7 @@
     .games-list {
         justify-content: flex-start !important;
         flex-basis: auto !important;
+        min-height: 500px;
     }
 
 }
@@ -19,4 +20,13 @@
     gap: 15px;
     width: 100%;
     position: relative;
+}
+
+.no-games {
+    height: 100px;
+    left:50%;
+    width: 100%;
+    text-align: center;
+    margin-top: 15%;
+    font-size: 2rem;
 }

@@ -3,7 +3,6 @@ import { Context } from '../../store/Store';
 
 import './styles.css';
 
-import SortDropdown from './SortDropdown';
 import Dropdown from '../Dropdown';
 
 const Sort = props => {
@@ -11,6 +10,8 @@ const Sort = props => {
     const [state, dispatch] = useContext(Context);
 
     const options = ['Our Latest', 'Rating', 'Release Date'];
+
+    console.log('SORT RENDER');
 
     return (
         <div className='sort'>

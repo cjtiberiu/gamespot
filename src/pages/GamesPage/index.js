@@ -8,6 +8,7 @@ import { useOuterClick } from '../../hooks/OuterClick';
 
 import GamesList from '../../components/GamesList';
 import Spinner from '../../components/Spinner';
+import FiltersArea from '../../components/FiltersArea';
 import Sort from '../../components/Sort';
 import SearchInput from '../../components/SearchInput';
 import YearFilter from '../../components/YearFilter';
@@ -62,25 +63,13 @@ const GamesPage = props => {
                     <i className="fas fa-filter"></i>
                     <span>Filters</span>
                 </div>
-                <div className='heading-primary'>
-                    <Sort mobile={false} />
-                    <SearchInput mobile={false} />
-                    <YearFilter mobile={false} />
-                    <GenreFilter mobile={false} />
-                </div>
+
+                <FiltersArea mobile={false} />
                 
             </div>
 
-            <div className='mobile-filters-menu' ref={innerRef} style={{ 'display': `${filtersMenu ? 'flex' : 'none'}`}}>
-                {/* <div className='close-filters-menu'><span className='x' onClick={() => setFiltersMenu(false)}>X</span></div> */}
-                <SearchInput mobile={true} />
-                <Sort mobile={true} />
-                <YearFilter mobile={true} />
-                <GenreFilter mobile={true} />
-            </div>
-
-            
-
+            <FiltersArea mobile={true} filtersMenu={filtersMenu} innerRef={innerRef} />
+                
             
             {
                 isLoading ? <Spinner /> : <GamesList filtersMenu={filtersMenu} setPageHeight={setPageHeight} />
