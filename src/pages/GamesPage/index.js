@@ -58,8 +58,10 @@ const GamesPage = props => {
     return (
         <div className='games-area'>
             <div className='games-area__header'>
-                <div className='filters-button' onClick={() => setFiltersMenu(!filtersMenu)}>Show Filters
-                <i className="far fa-arrow-alt-circle-right"></i>
+                
+                <div className='filters-button' onClick={() => setFiltersMenu(!filtersMenu)}>
+                    <i class="fas fa-filter"></i>
+                    <span>Filters</span>
                 </div>
                 <div className='heading-primary'>
                     <Sort mobile={false} />

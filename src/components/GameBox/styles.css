@@ -18,6 +18,7 @@
     .game {
         width: 220px !important;
         height: 300px !important;
+        margin: 0 !important;
     }
 
     .game-img {
@@ -59,6 +60,7 @@
     color: rgba(197, 197, 197, 0.8);
     background-image: linear-gradient( rgba(191, 205, 216, 0.4),rgba(136, 145, 153, 0.06));
     text-decoration: none;
+    margin: 10px;
 
     /* position: relative; */
     -webkit-transform: translateZ(0);

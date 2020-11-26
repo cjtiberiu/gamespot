@@ -9,6 +9,7 @@
 
     .game-detail__images {
         justify-content: flex-start !important;
+        margin: 0 !important;
     }
     
 
@@ -68,7 +69,8 @@
     flex-shrink: 0;
     flex-wrap: wrap;
     gap: 5px;
-    justify-content: space-between;
+    margin: 5px;
+    justify-content: flex-start;
 }
 
 .game-detail__smallimg {

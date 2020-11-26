@@ -1,10 +1,18 @@
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 769px) {
     .header-nav {
         display: flex !important;
     }
 
     .mobile-nav {
         display: none !important;
+    }
+
+    .page-title {
+        display: none !important;
+    }
+
+    .mobile-nav-link {
+        margin-bottom: 15px !important;
     }
 }
 
@@ -61,9 +69,19 @@ a {
 .mobile-nav {
     position: fixed;
     background-color: rgba(1, 14, 26, 0.5);
-    height: 8vh;
+    height: 60px;
     left: 0;
     width: 100vw;
+    color: rgba(197, 197, 197, 0.8);
+}
+
+.page-title {
+    left: 50%;
+    position: absolute;
+    top: 15px;
+    font-size: 2rem;
+    transform: translate(-50%, 0);
+    color: rgb(120, 140, 170);
 }
 
 
@@ -129,6 +147,7 @@ a {
     border: 3px solid rgba(197, 197, 197, 0.8);
     padding: 10px;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
 
@@ -138,9 +157,8 @@ a {
     justify-content: center;
     align-items: center; 
     width: 70px;
-    margin-top: 4%;
+    margin-top: 30px;
     margin-left: auto;
-    height: 30px;
     cursor: pointer;
     transition: all .3s ease-in-out;
     z-index: 10;

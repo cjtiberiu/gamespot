@@ -1,12 +1,16 @@
 import React from 'react';
 
-import './styles.css';
+import './styles2.css';
+
+import {ReactComponent as Controller} from '../../assets/svg/controller.svg';
 
 const Spinner = () => {
 
     return (
         <div className='spinner-overlay'>
-            <div className='spinner-container'></div>
+            <div className='spinner-container'>
+                <Controller />
+            </div>
         </div>
     )
 };

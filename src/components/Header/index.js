@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import './styles.css';
 
-const Header = () => {
+const Header = props => {
 
     const [displayMenu, setDisplayMenu] = useState(false);
+
+    console.log(props);
     
 
     const handleNavMenu = () => {
@@ -21,6 +23,11 @@ const Header = () => {
 
             <div className='container'>
 
+                <div className='page-title'>
+                    { props.location.pathname === '/games' ? 'Games' : null}
+                    { props.location.pathname === '/contact' ? 'Contact' : null}
+                </div>
+
                 <div className='header-nav active-nav'>
                     <div className='nav'>
                         <Link to='/games'><div id='games' className='nav-link'>OUR GAMES</div></Link>
@@ -29,11 +36,7 @@ const Header = () => {
                 </div>
 
                 <div className='mobile-nav'>
-                    {/* <div className='mobile-acces' onClick={handleNavMenu}>
-                        <div className='bar' style={{ 'transform': `${displayMenu ? 'rotate(-45deg)' : ''}`}}></div>
-                        <div className='bar' style={{ 'visibility': `${displayMenu ? 'hidden' : 'visible'}`}}></div>
-                        <div className='bar'></div>
-                    </div> */}
+                    
                     <div className={`menu-btn ${displayMenu ? 'open' : ''}`} onClick={handleNavMenu}>
                         <div className="menu-btn__burger"></div>
                     </div>
@@ -53,4 +56,4 @@ const Header = () => {
     )
 };
 
-export default Header;
+export default withRouter(Header);

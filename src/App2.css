@@ -1,15 +1,14 @@
 
 
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1200px) {
 
     html {
         font-size: 16px !important;
     }
 
     .container {
-        width: 80%;
-        max-width: 80%;
+        width: 80% !important;
     }
 }
 
@@ -26,6 +25,7 @@
 html {
     font-size: 12px;
     min-height: 100vh;
+    background-color: rgb(1, 14, 26);
     
 }
 
@@ -39,6 +39,7 @@ body {
     max-width: 110vw !important;
     overflow-x: hidden;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 
 }
 
