@@ -84,6 +84,7 @@
 
 
 .mobile-filters-menu {
+    flex-shrink: 0;
     padding-top: 20px;
     flex-direction: column;
     padding-left: 20px;
@@ -109,6 +110,7 @@
 
 .mobile-filters-menu .sort {
     margin-bottom: 20px;
+    flex-shrink: 0;
     flex-direction: column;
     white-space: nowrap;
 }
@@ -126,12 +128,14 @@
 .mobile-filters-menu .year-filter {
     margin-bottom: 20px;
     flex-direction: column;
+    flex-shrink: 0;
     white-space: nowrap;
 }
 
 .mobile-filters-menu .genre-filter {
     margin-bottom: 20px;
     flex-direction: column;
+    flex-shrink: 0;
     white-space: nowrap;
 }
 

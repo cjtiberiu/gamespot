@@ -25,6 +25,7 @@
 html {
     font-size: 12px;
     min-height: 100vh;
+    background-color: rgb(1, 14, 26);
     
 }
 
@@ -38,6 +39,7 @@ body {
     max-width: 110vw !important;
     overflow-x: hidden;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 
 }
 

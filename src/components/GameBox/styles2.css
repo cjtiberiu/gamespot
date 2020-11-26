@@ -1,4 +1,4 @@
-/* @media only screen and (min-width: 1820px) {
+@media only screen and (min-width: 1820px) {
     .game {
         width: 15.5% !important;
         height: 350px !important;
@@ -7,12 +7,12 @@
     .game-title {
         height: 80px !important;
     }
-} */
+}
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1080px) and (max-width: 1820px) {
 
     .game {
-        width: 210px !important;
+        width: 18% !important;
         height: 300px !important;
     }
 
