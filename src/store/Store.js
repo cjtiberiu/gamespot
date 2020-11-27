@@ -2,7 +2,7 @@ import React, { createContext, useReducer } from 'react';
 import Reducer from './Reducer';
 
 const INITIAL_STATE = {
-    sortBy: 'Release Date',
+    sortBy: 'My Latest',
     searchField: '',
     yearFilter: [],
     genreFilter: [],

@@ -27,12 +27,12 @@ const GamesList = props => {
 
         } else {
 
-            // if (state.sortBy === 'Our Latest') {
+            if (state.sortBy === 'My Latest') {
 
-            //     return filteredGames.map(el => el).sort((a, b) => b.myDate - a.myDate).map(game => {
-            //         return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />
-            //     })
-            if (state.sortBy === 'Rating') {
+                return filteredGames.map(el => el).sort((a, b) => b - a).map(game => {
+                    return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />
+                })
+            } else if (state.sortBy === 'Rating') {
     
                 return filteredGames.map(el => el).sort((a, b) => b.rating - a.rating).map(game => {
                     return <GameBox filtersMenu={props.filtersMenu} key={game.id} game={game} />

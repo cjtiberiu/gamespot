@@ -9,7 +9,7 @@ const Sort = props => {
 
     const [state, dispatch] = useContext(Context);
 
-    const options = ['Name', 'Rating', 'Release Date'];
+    const options = ['My Latest', 'Name', 'Rating', 'Release Date'];
 
     console.log('SORT RENDER');
 

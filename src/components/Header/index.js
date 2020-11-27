@@ -33,7 +33,7 @@ const Header = props => {
                     </div>
                 </div>
 
-                <div className='mobile-nav'>
+                <div className='mobile-nav' style={{ backgroundColor: props.location.pathname === '/' ? 'rgba(6, 40, 71, 0)' : 'rgba(6, 40, 71, 0.5)'}}>
 
                     <div className='logo' onClick={() => props.history.push('/')}>
                         <Controller />

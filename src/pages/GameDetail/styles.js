@@ -10,7 +10,7 @@ export const SmallImage = styled.img`
     }
 
     @media (max-width: 500px) {
-        width: 110px;
+        width: 80px;
         height: 50px;
     }
 `;

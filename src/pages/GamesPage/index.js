@@ -33,9 +33,9 @@ const GamesPage = props => {
             try {
 
 
-                const results = await axios.get('https://rawg.io/api/users/tiberu05/games?page=1&page_size=40');
+                const results = await axios.get('https://rawg.io/api/users/tiberu05/games?ordering=-created&page=1&page_size=40');
 
-                const nextResults = await axios.get('https://rawg.io/api/users/tiberu05/games?page=2&page_size=40')
+                const nextResults = await axios.get('https://rawg.io/api/users/tiberu05/games?ordering=-created&page=2&page_size=40')
 
                 const games = [].concat(results.data.results, nextResults.data.results);
 
