@@ -11,8 +11,6 @@ const Sort = props => {
 
     const options = ['My Latest', 'Name', 'Rating', 'Release Date'];
 
-    console.log('SORT RENDER');
-
     return (
         <div className='sort'>
             <div>Sort by: {state.sortBy}</div>

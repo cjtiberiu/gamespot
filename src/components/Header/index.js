@@ -15,8 +15,6 @@ const Header = props => {
         displayMenu ? setDisplayMenu(false) : setDisplayMenu(true);
     }
 
-    console.log(props);
-
     return (
         <header className='header'>
 
