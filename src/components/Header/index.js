@@ -15,6 +15,7 @@ const Header = props => {
         displayMenu ? setDisplayMenu(false) : setDisplayMenu(true);
     }
 
+    console.log(props);
 
     return (
         <header className='header'>
@@ -24,11 +25,11 @@ const Header = props => {
                 <div className='header-nav active-nav'>
                     <div className='logo' onClick={() => props.history.push('/')}>
                         <Controller />
-                        <span className='logo-text'>GAMESPOT</span>
+                        <span className='logo-text'>VGAME DB</span>
                     </div>
                     <div className='nav'>
-                        <Link to='/games'><div id='games' className='nav-link'>OUR GAMES</div></Link>
-                        <Link to='/contact'><div id='contact' className='nav-link'>HOW TO FIND US</div></Link>
+                        <Link to='/games'><div id='games' className='nav-link'>GAMES</div></Link>
+                        <Link to='/contact'><div id='contact' className='nav-link'>CONTACT</div></Link>
                     </div>
                 </div>
 
@@ -36,7 +37,10 @@ const Header = props => {
 
                     <div className='logo' onClick={() => props.history.push('/')}>
                         <Controller />
-                        <span className='logo-text'>GAMESPOT</span>
+                        {
+                            props.location.pathname === '/' ? (<span className='logo-text'>VGAMES DB</span>) : null
+                        }
+                        
                     </div>
                     
                     <div className={`menu-btn ${displayMenu ? 'open' : ''}`} onClick={handleNavMenu}>
@@ -45,8 +49,8 @@ const Header = props => {
                     {
                         !displayMenu ? null : (
                             <div className='mobile-menu'>
-                                <Link to='/games'><div id='games' className='mobile-nav-link' onClick={() => setDisplayMenu(false)}>OUR GAMES</div></Link>
-                                <Link to='/contact'><div id='contact' className='mobile-nav-link' onClick={() => setDisplayMenu(false)}>HOW TO FIND US</div></Link>
+                                <Link to='/games'><div id='games' className='mobile-nav-link' onClick={() => setDisplayMenu(false)}>GAMES</div></Link>
+                                <Link to='/contact'><div id='contact' className='mobile-nav-link' onClick={() => setDisplayMenu(false)}>CONTACT</div></Link>
                             </div>
                         )
                     }

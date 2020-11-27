@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../../store/Store';
 
 import './styles.css';
 
@@ -8,6 +9,8 @@ import YearFilter from '../YearFilter';
 import GenreFilter from '../GenreFilter';
 
 const FiltersArea = props => {
+
+    const [state, dispatch] = useContext(Context);
 
     const { mobile, filtersMenu, innerRef } = props;
 

@@ -9,10 +9,7 @@ import { useOuterClick } from '../../hooks/OuterClick';
 import GamesList from '../../components/GamesList';
 import Spinner from '../../components/Spinner';
 import FiltersArea from '../../components/FiltersArea';
-import Sort from '../../components/Sort';
-import SearchInput from '../../components/SearchInput';
-import YearFilter from '../../components/YearFilter';
-import GenreFilter from '../../components/GenreFilter';
+
 
 const GamesPage = props => {
 
@@ -34,10 +31,17 @@ const GamesPage = props => {
         const getGames = async () => {
 
             try {
-                const results = await axios.get('https://rawg.io/api/users/tiberu05/games')
+
+
+                const results = await axios.get('https://rawg.io/api/users/tiberu05/games?page=1&page_size=40');
+
+                const nextResults = await axios.get('https://rawg.io/api/users/tiberu05/games?page=2&page_size=40')
+
+                const games = [].concat(results.data.results, nextResults.data.results);
 
                 // if (isLoading) setGames(results.data.results);
-                if (isLoading) dispatch({ type: "GET_GAMES", payload: results.data.results})
+
+                dispatch({ type: "GET_GAMES", payload: games})
 
                 setIsLoading(false);
     

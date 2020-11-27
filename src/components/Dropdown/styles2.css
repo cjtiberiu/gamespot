@@ -43,6 +43,7 @@
 .dropdown-option {
     white-space: nowrap;
     transition: all .3s ease;
+    margin-bottom: 5px;
     
 }
 
@@ -79,12 +80,13 @@
 
   .checkmark {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     height: 22px;
     width: 22px;
     background-color: rgb(53, 55, 58);
     border-radius: 50%;
+    
   }
 
   .checkmark svg {

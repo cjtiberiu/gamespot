@@ -17,6 +17,12 @@
     .mobile-filters-menu {
         display: none !important;
     }
+
+    .games-area__header {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
 
@@ -33,21 +39,7 @@
     margin: 0 auto;
 }
 
-.filters-area {
 
-    justify-content: flex-start;
-    gap: 35px;
-    font-size: 1.75rem;
-    font-weight: 400;
-    letter-spacing: 5px;
-    color: rgba(197, 197, 197, 0.8);
-    position: relative;
-    width: 100%;
-    text-shadow: 0 0 15px 12px black;
-    margin-bottom: 25px;
-    align-items: center;
-    display: none;
-}
 
 /* .filters-button {
     position: absolute;

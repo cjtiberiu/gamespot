@@ -8,6 +8,11 @@
         width: auto !important;
         opacity: 0.9;
     }
+
+    .background-image {
+        height: 150% !important;
+        width: 150% !important;
+    }
     
     .homepage .controller-svg {
         width: 500px !important;
@@ -30,7 +35,7 @@
     top: -20%;
     left: -20%;
     height: 150%;
-    width: 150%;
+    width: 120%;
     opacity: 0.1;
     background-image: url('../../assets/img/second-cover.jpg');
     background-size: cover;

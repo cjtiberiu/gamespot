@@ -31,7 +31,7 @@
     .logo svg {
         width: 50px !important;
         height: 50px !important;
-        margin-bottom: -15px !important;
+        margin-bottom: -12px !important;
     }
     
     .logo-text {
@@ -179,7 +179,6 @@ a {
     display: flex;
     flex-direction: column;
     right: 0;
-    gap: 15px;
     position: absolute;
     top: 0;
     height: 100vh;

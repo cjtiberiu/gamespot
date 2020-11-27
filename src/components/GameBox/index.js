@@ -25,7 +25,7 @@ const GameBox = props => {
                 <div className='game-content'>
                     <h2 className='game-title'>{game.name}</h2>
                     <div className='game-releasedate info'><span className='info-span'>Released:</span>  <span className='info-span-data'>{formatDate(game.released)}</span></div>
-                    <div className='info'><span className='info-span'>Rating: </span><span className='info-span-data'><span className='game-rating'>{game.rating}</span> / 5</span></div>
+                    <div className='info'><span className='info-span'>RAWG Rating: </span><span className='info-span-data'><span className='game-rating'>{game.rating}</span> / 5</span></div>
 
                 </div>
             </div>

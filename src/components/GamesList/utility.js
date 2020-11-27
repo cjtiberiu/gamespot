@@ -1,7 +1,7 @@
 export const filterGames = (arr, input, yearFilter, genreFilter) => {
     let filteredArray = arr.map(el => el);
 
-    if (input && input.length > 2) {
+    if (input && input.length > 1) {
         
         filteredArray = filteredArray.filter(el => el.name.toLowerCase().includes(input.toLowerCase()));
         if (yearFilter.length === 0 && genreFilter.length === 0) {
