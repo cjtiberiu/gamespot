@@ -10,6 +10,8 @@ import GamesPage from './pages/GamesPage';
 import ContactPage from './pages/ContactPage';
 import GameDetail from './pages/GameDetail';
 
+import ErrorBoundary from './components/ErrorBoundary';
+
 import Header from './components/Header';
 
 const App = () => {
@@ -37,11 +39,15 @@ const App = () => {
 
                 <div className='container'>
                     <Switch>
+                        <ErrorBoundary>
 
-                        <Route exact path='/' component={HomePage} />
-                        <Route exact path='/games' component={() => <GamesPage />} />
-                        <Route exact path='/games/:game' component={GameDetail} />
-                        <Route exact path='/contact' component={ContactPage} />
+                            <Route exact path='/' component={HomePage} />
+                            <Route exact path='/games' component={() => <GamesPage />} />
+                            <Route exact path='/games/:game' component={GameDetail} />
+                            <Route exact path='/contact' component={ContactPage} />
+
+                        </ErrorBoundary>
+                        
                         
                     </Switch>
                     

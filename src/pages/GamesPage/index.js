@@ -23,6 +23,9 @@ const GamesPage = props => {
         if (filtersMenu) setFiltersMenu(false);
     })
 
+
+    
+
     useEffect(() => {
         //setPageHeight();
 
@@ -47,7 +50,7 @@ const GamesPage = props => {
     
                 //props.setPageHeight()
             } catch(err) {
-                console.log(err)
+                throw err;
             }
             
         }

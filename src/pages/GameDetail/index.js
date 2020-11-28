@@ -35,7 +35,7 @@ const GameDetail = props => {
 
                 setBackground(result.data.background_image);
             } catch (err) {
-                console.log(err);
+                throw err;
             }
 
         }
