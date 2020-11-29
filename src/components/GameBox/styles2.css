@@ -21,6 +21,13 @@
         margin: 0 !important;
     }
 
+    .game:hover {
+        /* box-shadow: 0 0 10px 2px rgba(184, 178, 178, 0.5); */
+        cursor: pointer;
+        transform: scale(1.07);
+        outline: 1px solid lightblue;
+    }
+
     .game-img {
         height: 120px !important;
     }
@@ -142,9 +149,9 @@
 
 
 .game:hover {
-    box-shadow: 0 8px 6px -6px black;
+    /* box-shadow: 0 0 10px 2px rgba(184, 178, 178, 0.5); */
     cursor: pointer;
-    outline: 1px solid lightblue
+    outline: 1px solid lightblue;
 }
 
 .game:hover .info {
