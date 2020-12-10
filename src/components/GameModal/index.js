@@ -26,7 +26,8 @@ const GameModal = props => {
         }, 100)
     });
     
-    console.log('MOUNTED');
+    console.log(state.selectedGame);
+    console.log(game);
 
     const { showModal, selectedGame } = state;
 
@@ -85,6 +86,8 @@ const GameModal = props => {
                     modalLoading ? <Spinner /> : (
                             
                         <div className='game-detail' ref={innerRef}>
+                            
+
                             <div className='background-img'></div>
                             <div className='game-detail__left-container'>
                                 <h1 className='mobile-game-title'>{selectedGame.name}</h1>

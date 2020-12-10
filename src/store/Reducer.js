@@ -19,11 +19,7 @@ const Reducer = (state, action) => {
         case "SHOW_MODAL": 
             return { ...state, showModal: true, selectedGame: action.payload }
         case "HIDE_MODAL":
-            return { ...state, showModal: false, selectedGame: {}, modalLoading: true }
-        case "MODAL_LOADED":
-            return { ...state, modalLoading: false }
-        case "MODAL_LOADING":
-            return { ...state, modalLoading: true }
+            return { ...state, showModal: false, selectedGame: {} }
         default:
             return state;
     }

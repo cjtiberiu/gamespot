@@ -178,3 +178,20 @@
     height: auto;
     border-bottom: 1px solid black;
 }
+
+.platform-icons {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    display: flex;
+}
+
+.platform-icon {
+    z-index: 15;
+    color: magenta;
+}
+
+.platform-icon svg {
+    width: 40px;
+    height: 40px;
+}
