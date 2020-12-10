@@ -20,7 +20,8 @@
 
     .game-detail__about {
         overflow-y: scroll !important;
-        width: 50%;
+        width: 48% !important;
+        padding: 8px;
     }
 
     .game-detail__smallimg {

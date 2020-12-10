@@ -1,7 +1,5 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import { Context } from './store/Store';
-import axios from 'axios';
+import React, { useRef } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 import './App2.css';
 
@@ -10,29 +8,20 @@ import GamesPage from './pages/GamesPage';
 import ContactPage from './pages/ContactPage';
 import GameDetail from './pages/GameDetail';
 
+//import GameModal from './components/GameModal';
+
 import ErrorBoundary from './components/ErrorBoundary';
 
 import Header from './components/Header';
 
 const App = () => {
 
-    const [height, setHeight] = useState(0);
 
     const containerRef = useRef();
 
-    useEffect(() => {
-        //setHeight(containerRef.current.scrollHeight);
-
-
-    }, []);
-
-    // const setPageHeight = () => {
-    //     setHeight(containerRef.current.scrollHeight);
-    // }
-
 
     return (
-        <div className='app-container' ref={containerRef} style={{'height': height}}>
+        <div className='app-container' ref={containerRef}>
             <Header />
 
             <div className='content'>

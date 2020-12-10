@@ -25,7 +25,7 @@
         /* box-shadow: 0 0 10px 2px rgba(184, 178, 178, 0.5); */
         cursor: pointer;
         transform: scale(1.07);
-        outline: 1px solid lightblue;
+        /* outline: 1px solid lightblue; */
     }
 
     .game-img {
@@ -87,7 +87,7 @@
     height: auto;
     /* box-shadow: 0 0 12px rgba(0,0,0,0.12); */
     color: rgba(197, 197, 197, 0.8);
-    background-image: linear-gradient( rgba(191, 205, 216, 0.4),rgba(136, 145, 153, 0.06));
+    background-image: linear-gradient( rgba(103, 125, 165, 0.4),rgba(136, 145, 153, 0.06));
     text-decoration: none;
     margin: 10px;
 

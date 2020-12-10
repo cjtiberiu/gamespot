@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { Context } from '../../store/Store';
 import { useHistory } from 'react-router-dom';
 
 import './styles2.css';
@@ -8,6 +9,7 @@ import Image from '../../assets/img/first-cover.jpg';
 const GameBox = props => {
 
     const history = useHistory();
+    const [state, dispatch] = useContext(Context);
 
     const { game, filtersMenu } = props;
 
@@ -17,7 +19,8 @@ const GameBox = props => {
     }
 
     return (
-            <div key={game.id} className='game' onClick={() => props.filtersMenu ? null : history.push(`games/${game.slug}`)}>
+            // <div key={game.id} className='game' onClick={() => props.filtersMenu ? null : history.push(`games/${game.slug}`)}>
+            <div key={game.id} className='game' onClick={() => props.filtersMenu ? null : dispatch({ type: 'SHOW_MODAL', payload: game })}>
                 <div className='overlay'>
                     <div className='text-box'>Game details</div>
                 </div>

@@ -10,6 +10,8 @@ import GamesList from '../../components/GamesList';
 import Spinner from '../../components/Spinner';
 import FiltersArea from '../../components/FiltersArea';
 
+import GameModal from '../../components/GameModal';
+
 
 const GamesPage = props => {
 
@@ -18,6 +20,7 @@ const GamesPage = props => {
     const { setPageHeight } = props;
     const [isLoading, setIsLoading] = useState(true);
     const [filtersMenu, setFiltersMenu] = useState(false);
+
 
     const innerRef = useOuterClick(e => {
         if (filtersMenu) setFiltersMenu(false);
@@ -80,6 +83,10 @@ const GamesPage = props => {
             
             {
                 isLoading ? <Spinner /> : <GamesList filtersMenu={filtersMenu} setPageHeight={setPageHeight} />
+            }
+
+            {
+                !state.showModal ? null : <GameModal />
             }
          
 

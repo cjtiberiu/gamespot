@@ -7,7 +7,10 @@ const INITIAL_STATE = {
     yearFilter: [],
     genreFilter: [],
     games: [],
-    loadingGames: true
+    loadingGames: true,
+    selectedGame: {},
+    showModal: false,
+    modalLoading: true
 };
 
 const Store = ({children}) => {

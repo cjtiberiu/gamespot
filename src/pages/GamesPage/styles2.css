@@ -95,6 +95,10 @@
     border: 1px solid rgba(197, 197, 197, 0.2);
 }
 
+.mobile-filters-menu ::-webkit-scrollbar {
+    display: none;
+}
+
 .close-filters-menu {
     margin-bottom: 20px;
     justify-content: flex-end;

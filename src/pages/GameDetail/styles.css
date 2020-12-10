@@ -17,11 +17,6 @@
         width: 50% !important;
     }
 
-    .game-detail__about {
-        overflow-y: scroll !important;
-        width: 50%;
-    }
-
     .game-detail__smallimg {
         width: 120px !important;
         height: 60px !important;
@@ -40,6 +35,8 @@
     .game-detail__about {
         margin-left: 15px !important;
         font-size: 1rem !important;
+        overflow-y: scroll !important;
+        width: 20% !important;
         
     }
 
