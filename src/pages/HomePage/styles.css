@@ -12,6 +12,7 @@
     .background-image {
         height: 150% !important;
         width: 150% !important;
+        background-image: none !important;
     }
     
     .homepage .controller-svg {
@@ -32,12 +33,12 @@
 
 .background-image {
     position: absolute;
-    top: -20%;
-    left: -20%;
-    height: 150%;
-    width: 130%;
-    opacity: 0.1;
-    
+    height: 110%;
+    width: 110%;
+    opacity: 0.9;
+    background-image: linear-gradient(rgb(6, 40, 71), rgba(6, 40, 71, 0.7)), url('../../assets/img/second-cover.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .title {

@@ -5,6 +5,7 @@
 
     html {
         font-size: 16px !important;
+        background-color: transparent !important;
     }
 
     .container {
@@ -38,6 +39,7 @@
 html {
     font-size: 12px;
     min-height: 100vh;
+    background-color: rgb(6, 40, 71);
     
 }
 
@@ -56,8 +58,7 @@ body {
     background-image: linear-gradient(rgb(6, 40, 71), rgba(6, 40, 71, 0.7)), url('./assets/img/second-cover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    
+    background-attachment: fixed;    
 
 }
 

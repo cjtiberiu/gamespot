@@ -6,7 +6,7 @@ import './App2.css';
 import HomePage from './pages/HomePage';
 import GamesPage from './pages/GamesPage';
 import ContactPage from './pages/ContactPage';
-import GameDetail from './pages/GameDetail';
+//import GameDetail from './pages/GameDetail';
 
 //import GameModal from './components/GameModal';
 
@@ -32,7 +32,7 @@ const App = () => {
 
                             <Route exact path='/' component={HomePage} />
                             <Route exact path='/games' component={() => <GamesPage />} />
-                            <Route exact path='/games/:game' component={GameDetail} />
+                            {/* <Route exact path='/games/:game' component={GameDetail} /> */}
                             <Route exact path='/contact' component={ContactPage} />
 
                         </ErrorBoundary>

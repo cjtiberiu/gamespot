@@ -9,6 +9,7 @@ import { SmallImage } from './styles';
 import { useOuterClick } from '../../hooks/OuterClick';
 
 import './styles.css';
+import './game-detail.css';
 
 const GameModal = props => {
 
