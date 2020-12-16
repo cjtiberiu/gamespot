@@ -48,7 +48,8 @@
 html {
     font-size: 12px;
     min-height: 100vh;
-    /* background-color: rgb(6, 40, 71); */
+    background-color: rgb(6, 40, 71);
+    z-index: -1;
     
 }
 

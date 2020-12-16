@@ -24,9 +24,7 @@ const GameBox = props => {
     return (
             // <div key={game.id} className='game' onClick={() => props.filtersMenu ? null : history.push(`games/${game.slug}`)}>
             <div key={game.id} className='game' onClick={() => props.filtersMenu ? null : dispatch({ type: 'SHOW_MODAL', payload: game })}>
-                <div className='overlay'>
-                    <div className='text-box'>Game details</div>
-                </div>
+                
                 {/* <div className='platform-icons'>
                             {
                                 game.platforms.map(el => {
