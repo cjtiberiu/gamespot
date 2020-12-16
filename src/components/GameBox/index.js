@@ -21,15 +21,13 @@ const GameBox = props => {
         return d.getDate() + '.' +  (d.getMonth() + 1) + '.' +  d.getFullYear();
     }
 
-    console.log(game);
-
     return (
             // <div key={game.id} className='game' onClick={() => props.filtersMenu ? null : history.push(`games/${game.slug}`)}>
             <div key={game.id} className='game' onClick={() => props.filtersMenu ? null : dispatch({ type: 'SHOW_MODAL', payload: game })}>
                 <div className='overlay'>
                     <div className='text-box'>Game details</div>
                 </div>
-                <div className='platform-icons'>
+                {/* <div className='platform-icons'>
                             {
                                 game.platforms.map(el => {
                                     if (el.platform.id === 187) {
@@ -37,7 +35,7 @@ const GameBox = props => {
                                     }
                                 })
                             }
-                            </div>
+                            </div> */}
                 <img className='game-img' src={game.background_image} />
                 <div className='game-content'>
                     <h2 className='game-title'>{game.name}</h2>

@@ -26,8 +26,6 @@ const GameModal = props => {
         }, 100)
     });
     
-    console.log(state.selectedGame);
-    console.log(game);
 
     const { showModal, selectedGame } = state;
 
@@ -78,7 +76,6 @@ const GameModal = props => {
             <div className='game-modal' >
 
                 <div className='close-modal' onClick={() => {
-                    console.log('click');
                     dispatch({type: 'HIDE_MODAL'})
                 }}><i className="far fa-times-circle"></i></div>
 

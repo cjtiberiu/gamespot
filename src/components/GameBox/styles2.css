@@ -1,18 +1,3 @@
-/* @media only screen and (min-width: 1201px) {
-    .game {
-        width: 15% !important;
-        height: 320px !important;
-    }
-
-    .game-img {
-        height: 130px !important;
-    }
-
-    .game-title {
-        height: 80px !important;
-    }
-} */
-
 @media only screen and (min-width: 1201px) {
 
     .game {
@@ -87,7 +72,7 @@
     height: auto;
     /* box-shadow: 0 0 12px rgba(0,0,0,0.12); */
     color: rgba(197, 197, 197, 0.8);
-    background-image: linear-gradient( rgba(103, 125, 165, 0.4),rgba(136, 145, 153, 0.06));
+    background-image: linear-gradient( rgba(124, 157, 236, 0.562),rgba(136, 145, 153, 0.06));
     text-decoration: none;
     margin: 10px;
 
@@ -108,33 +93,6 @@
     position: relative;
 }
 
-.text-box {
-    color: rgba(197, 197, 197, 0.8);
-    font-size: 20px;
-    position: absolute;
-    border: 3px solid rgba(197, 197, 197, 0.8);
-    padding: 10px;
-    font-weight: 500;
-    white-space: nowrap;
-    top: 85%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -40%);
-    -ms-transform: translate(-50%, -40%);
-    transform: translate(-50%, -40%);
-    text-align: center;
-    display: none;
-}
-
-.text-box:hover {
-    background-color: rgba(191, 205, 216, 0.5);
-    color: black;
-}
-
-
-.game:hover .overlay {
-    opacity: 1;
-}
-
 
 .info {
     margin-top: 10px;
@@ -145,6 +103,7 @@
     padding: 2px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 
